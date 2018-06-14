@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="widht=device-width, initial-scale=1.0">
+	<title> Pagina Inicial </title>
+</head>
+<body>
+	Qual seu nome?
+	<input type="text" 
+			id="meunome" 
+			placeholder="Nome" 
+			onkeyup="Imprimir()"/>
+			
+	<div id="impressao"> ... </div>
+	<button type="button" onclick="Limpar()">Limpar</button>
+	<script type="text/javascript">
+	
+		var meunomeValor = document.getElementById('meunome');
+		var impressaoValor = document.getElementById('impressao');
+			
+		function Limpar(){
+			impressaoValor.innerHTML = '...';
+			meunomeValor.value='';
+		}
+			
+		function Imprimir(){
+			impressaoValor.innerHTML = meunomeValor.value;
+			//alert(meunomeValor.value);
+		}
+	</script>
+</body>
+</html> 
